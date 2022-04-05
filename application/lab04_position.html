@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab04_position.html</title>
+    <style>
+        /* 부모 위에 붙어있는 static */
+        .static-parent{
+            /* 대부분 부모의 position을 relative로 설정 */
+            /* position: relative; */
+            width: 120px;
+            height: 120px;
+            background-color: grey;
+            border: 1px solid grey;
+        }
+        /* z-index는 static에서 쓸 수 없음. */
+        .static-box{
+            width: 120px;
+            height: 120px;
+            position: static;
+            background-color: navy;
+            color: red;
+        }
+        .relative-box{
+            z-index:2;
+            width: 120px;
+            /* 부모 기준 top에서 60px아래로 이동,left에서 60이동 */
+            top: 60px;
+            left: 60px;
+            height: 120px;
+            position: relative;
+            background-color: navy;
+            color: red;
+        }
+        .absolute-box{
+            z-index: 1;
+            width: 120px;
+            /* 부모가 default가 static이므로 body를 기준으로 top에서 60px아래로 이동,left에서 60이동 */
+            /* 부모가 position을 relative로 설정한다면 부모기준*/
+            top: 60px;
+            left: 60px;
+            height: 120px;
+            position: absolute;
+            background-color: navy;
+            color: red;
+        }
+        .fixed-box{
+            position: fixed;
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 60px;
+          /* 아래 botton,left 하|좌 초기화 */
+            bottom: 0;
+            left: 0;
+        }
+        .overflow{
+            width: 150px;
+            height: 150px;
+            border-style: dashed;
+            padding: 15px;
+            margin: 15px;
+            /* float:left 옆으로 정렬 */
+            float: left;
+        }
+        .visible{
+            overflow: visible;
+        }
+        .hidden{
+            overflow: hidden;
+        }
+        .scroll{
+            overflow: scroll;
+        }
+        .auto{
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--position-->
+    <div class="static-parent">
+        <!-- <div class="static-box">static</div> -->
+        <!-- <div class="relative-box">relative-box</div> -->
+        <!-- <div class="absolute-box">absolute-box</div> -->
+        <!-- <div class="fixed-box">footer</div> -->
+    </div>
+
+    <!--overflow-->
+    <div class="overflow visible">
+        <h3></h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error labore qui tenetur esse, vitae nostrum quisquam dolorum architecto assumenda eos, repudiandae asperiores voluptas aspernatur ab a, expedita cupiditate repellat quia!
+
+    </div>
+    <div class="overflow hidden">
+        <h3></h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error labore qui tenetur esse, vitae nostrum quisquam dolorum architecto assumenda eos, repudiandae asperiores voluptas aspernatur ab a, expedita cupiditate repellat quia!
+
+    </div>
+    <div class="overflow scroll">
+        <h3></h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error labore qui tenetur esse, vitae nostrum quisquam dolorum architecto assumenda eos, repudiandae asperiores voluptas aspernatur ab a, expedita cupiditate repellat quia!
+
+    </div>
+    <div class="overflow auto">
+        <h3></h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error labore qui tenetur esse, vitae nostrum quisquam dolorum architecto assumenda eos, repudiandae asperiores voluptas aspernatur ab a, expedita cupiditate repellat quia!
+
+    </div>
+  
+</body>
+</html>
+<!-- # position
+- static
+	- position의 기본값
+    - 기본위치를 기준으로 top, bottom, rigth, left x
+  
+- relative
+	- 기본위치를 기준으로 top, bottom, rigth, left
+    
+- absolute
+	- 부모요소 혹은 가까운 요소를 기준(static x) -->

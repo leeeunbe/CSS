@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab01_box.html</title>
+    <style>
+        div{
+            box-sizing: content-box;
+            width: 300px;
+            height: 100px;
+            background-color: beige;
+            border-style: solid;
+            border-color: blue;
+        }
+        p{
+            border-style: solid;
+            /* 4:상|우|하|좌 */
+            border-color: red blue yellow green;
+            /* 3:상|우좌|하 */
+            border-color: red blue yellow;
+            /* 2:상하|우좌*/
+            border-color: red blue;
+        }
+        p.div-border{
+            border : 1px solid;
+            width: 150px;
+            height: 150px;
+            background : gainsboro;
+            /* border-top-left-radius: 10px;
+            border-bottom-right-radius: 40px; */
+            border-radius: 5px 10px 20px 40px;
+            /* 시계방향 */
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus cupiditate accusantium voluptatem nulla suscipit iure et temporibus soluta deserunt, fugiat omnis dolorem provident odio in nisi, officiis fuga consequuntur eligendi.
+    </div> -->
+    <!--border-->
+    <p>
+        border-color
+    </p>
+    
+    <p class = "div-border">
+
+    </p>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
